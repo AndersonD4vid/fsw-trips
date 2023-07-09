@@ -12,20 +12,21 @@ datasource db {
 }
 
 model Trip {
-  id              String            @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
-  name            String
-  location        String
-  startDate       DateTime
-  endDate         DateTime
-  pricePerDay     Decimal           @db.Decimal(8, 2) // @db.Decimal(8, 2) significa que posso ter 8 casas decimais com precisão de 2 casas, exemplo: 1500.21
-  description     String
-  coverImage      String
-  imagesUrl       String[]
-  highlights      String[]
-  maxGuests       Int
-  TripReservation TripReservation[]
-  countryCode     String
-  recommended     Boolean           @default(false)
+  id                  String            @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
+  name                String
+  location            String
+  startDate           DateTime
+  endDate             DateTime
+  pricePerDay         Decimal           @db.Decimal(8, 2) // @db.Decimal(8, 2) significa que posso ter 8 casas decimais com precisão de 2 casas, exemplo: 1500.21
+  description         String
+  coverImage          String
+  imagesUrl           String[]
+  highlights          String[]
+  maxGuests           Int
+  TripReservation     TripReservation[]
+  countryCode         String
+  recommended         Boolean           @default(false)
+  locationDescription String            @default("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
 }
 
 model TripReservation {

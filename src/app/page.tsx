@@ -4,8 +4,8 @@ import QuickSearch from "./components/QuickSearch"
 import RecommendedTrips from "./components/RecommendedTrips"
 
 export const metadata = {
-  title: "Home",
-  description: "Home..."
+  title: "Home - Search for a trip",
+  description: "Search for a trip..."
 }
 
 export default function Home() {
