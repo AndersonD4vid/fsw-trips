@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import Trips from './about/components/Trips'
+"use client"
+
+import React from "react"
+import { signIn } from 'next-auth/react'
 
 export const metadata = {
   title: "Home",
@@ -7,9 +9,10 @@ export const metadata = {
 }
 
 export default function Home() {
+
   return (
-    <main className="container">
-      <Trips />
-    </main>
+    <div className="container">
+      <button onClick={() => signIn()}>Login</button>
+    </div >
   )
 }
