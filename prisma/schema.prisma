@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
@@ -19,10 +20,12 @@ model Trip {
   pricePerDay     Decimal           @db.Decimal(8, 2) // @db.Decimal(8, 2) significa que posso ter 8 casas decimais com precisão de 2 casas, exemplo: 1500.21
   description     String
   coverImage      String
-  imageUrl        String[]
+  imagesUrl       String[]
   highlights      String[]
   maxGuests       Int
   TripReservation TripReservation[]
+  countryCode     String
+  recommended     Boolean           @default(false)
 }
 
 model TripReservation {

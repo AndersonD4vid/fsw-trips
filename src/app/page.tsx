@@ -1,8 +1,7 @@
-"use client"
-
 import React from "react"
 import TripSearch from "./components/TripSearch"
 import QuickSearch from "./components/QuickSearch"
+import RecommendedTrips from "./components/RecommendedTrips"
 
 export const metadata = {
   title: "Home",
@@ -15,6 +14,7 @@ export default function Home() {
     <div className="container ">
       <TripSearch />
       <QuickSearch />
+      <RecommendedTrips />
     </div >
   )
 }
