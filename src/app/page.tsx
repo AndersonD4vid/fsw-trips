@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { signIn } from 'next-auth/react'
+import TripSearch from "./components/TripSearch"
 
 export const metadata = {
   title: "Home",
@@ -11,8 +11,8 @@ export const metadata = {
 export default function Home() {
 
   return (
-    <div className="container">
-      <button onClick={() => signIn()}>Login</button>
+    <div className="container ">
+      <TripSearch />
     </div >
   )
 }
