@@ -40,7 +40,7 @@ const TripLocation = ({ location, locationDescription }: TripLocationProps) => {
       <p className="text-xs text-primaryDarker mt-2 leading-5 lg:text-sm lg:mt-4">{locationDescription}</p>
 
       <Link href={`https://www.google.com/maps/place/${location}`} target="_blank">
-        <Button variant="outlined" className="w-full mt-5">
+        <Button variant="outlined" className="w-full mt-5 mb-15">
           Ver no Google Maps
         </Button>
       </Link>

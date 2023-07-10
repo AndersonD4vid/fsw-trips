@@ -1,11 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
 import React from "react";
-import TripHeader from "../components/TripHeader";
-import TripReservation from "../components/TripReservation";
-import TripDescription from "../components/TripDescription";
-import TripHighlights from "../components/TripHighlights";
-import TripLocation from "../components/TripLocation";
+import TripHeader from "./components/TripHeader";
+import TripReservation from "./components/TripReservation";
+import TripDescription from "./components/TripDescription";
+import TripHighlights from "./components/TripHighlights";
+import TripLocation from "./components/TripLocation";
 
 const getTripDetails = async (tripId: string) => {
    // chamando o prisma, e procura por um campo unico

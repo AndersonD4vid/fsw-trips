@@ -30,11 +30,15 @@ model Trip {
 }
 
 model TripReservation {
-  id     String @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
-  tripId String
-  trip   Trip   @relation(fields: [tripId], references: [id]) // Essa viagem tem uma relação onde o tripId, referencia ao campo [id] da viagem, ou seja do model Trip. OBS: Não salva no banco, serve apenas para controle interno
-  userId String
-  user   User   @relation(fields: [userId], references: [id])
+  id        String   @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
+  tripId    String
+  trip      Trip     @relation(fields: [tripId], references: [id]) // Essa viagem tem uma relação onde o tripId, referencia ao campo [id] da viagem, ou seja do model Trip. OBS: Não salva no banco, serve apenas para controle interno
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  startDate DateTime
+  endDate   DateTime
+  totalPaid Decimal  @db.Decimal(8, 2)
+  guests    Int      @default(5)
 }
 
 model Account {
