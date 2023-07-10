@@ -33,9 +33,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 # O que foi usado no projeto como back-end e banco de dados 
-Next.js, TailwindCSS, Node.Js, Express, PostgreSQL com Prisma, Supabase.
+Next.js, TailwindCSS, Node.Js, PostgreSQL com Prisma, Supabase.
 
-[![My Skills](https://skillicons.dev/icons?i=nextjs,tailwindcss,nodejs,express,postgres,prisma,supabase,&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nextjs,tailwindcss,nodejs,postgres,prisma,supabase,&perline=10)](https://skillicons.dev)
 
 ## Aprenda mais
 - O que é uma migration?: É basicamente uma migração na estrutura dos dados,
