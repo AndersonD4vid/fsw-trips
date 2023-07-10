@@ -1,9 +1,16 @@
-import React from "react"
+import React from "react";
+import Trips from "./components/Trips";
 
-const About = () => {
-   return (
-      <div>About</div>
-   )
-}
+export const metadata = {
+  title: "About",
+};
 
-export default About;
+const Page = () => {
+  return (
+    <div>
+      <Trips />
+    </div>
+  );
+};
+
+export default Page;

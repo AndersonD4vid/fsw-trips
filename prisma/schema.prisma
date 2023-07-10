@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
   previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
@@ -12,27 +12,27 @@ datasource db {
 }
 
 model Trip {
-  id                  String            @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
+  id                  String            @id @default(uuid())
   name                String
   location            String
+  locationDescription String            @default("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
   startDate           DateTime
   endDate             DateTime
-  pricePerDay         Decimal           @db.Decimal(8, 2) // @db.Decimal(8, 2) significa que posso ter 8 casas decimais com precisão de 2 casas, exemplo: 1500.21
+  pricePerDay         Decimal           @db.Decimal(8, 2)
   description         String
   coverImage          String
   imagesUrl           String[]
   highlights          String[]
   maxGuests           Int
-  TripReservation     TripReservation[]
+  reservations        TripReservation[]
   countryCode         String
   recommended         Boolean           @default(false)
-  locationDescription String            @default("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
 }
 
 model TripReservation {
-  id        String   @id @default(uuid()) // @id define a Primary Key e @default significa que se eu criar uma trip e não passar o ID ele gera um ID aleatório
+  id        String   @id @default(uuid())
   tripId    String
-  trip      Trip     @relation(fields: [tripId], references: [id]) // Essa viagem tem uma relação onde o tripId, referencia ao campo [id] da viagem, ou seja do model Trip. OBS: Não salva no banco, serve apenas para controle interno
+  trip      Trip     @relation(fields: [tripId], references: [id])
   userId    String
   user      User     @relation(fields: [userId], references: [id])
   startDate DateTime
@@ -69,14 +69,14 @@ model Session {
 }
 
 model User {
-  id              String            @id @default(cuid())
-  name            String?
-  email           String?           @unique
-  emailVerified   DateTime?
-  image           String?
-  accounts        Account[]
-  sessions        Session[]
-  TripReservation TripReservation[]
+  id            String            @id @default(cuid())
+  name          String?
+  email         String?           @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  reservations  TripReservation[]
 }
 
 model VerificationToken {

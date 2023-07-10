@@ -35,7 +35,7 @@ const TripReservation = ({ tripId, maxGuests, tripStartDate, tripEndDate, priceP
   const router = useRouter();
 
   const onSubmit = async (data: TripReservationForm) => {
-    const response = await fetch("http://localhost:3000/api/trips/check", {
+    const response = await fetch("/api/trips/check", {
       method: "POST",
       body: Buffer.from(
         JSON.stringify({
@@ -151,7 +151,6 @@ const TripReservation = ({ tripId, maxGuests, tripStartDate, tripEndDate, priceP
         error={!!errors?.guests}
         errorMessage={errors?.guests?.message}
         type="number"
-        maxLength={1}
       />
 
       <div className="flex justify-between mt-3">

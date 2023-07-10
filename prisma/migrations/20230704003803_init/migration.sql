@@ -8,7 +8,7 @@ CREATE TABLE "Trip" (
     "pricePerDay" DECIMAL(8,2) NOT NULL,
     "description" TEXT NOT NULL,
     "coverImage" TEXT NOT NULL,
-    "imageUrl" TEXT[],
+    "imagesUrl" TEXT[],
     "highlights" TEXT[],
     "maxGuests" INTEGER NOT NULL,
 
@@ -20,6 +20,9 @@ CREATE TABLE "TripReservation" (
     "id" TEXT NOT NULL,
     "tripId" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
+    "startDate" TIMESTAMP(3) NOT NULL,
+    "endDate" TIMESTAMP(3) NOT NULL,
+    "totalPaid" DECIMAL(8,2) NOT NULL,
 
     CONSTRAINT "TripReservation_pkey" PRIMARY KEY ("id")
 );
