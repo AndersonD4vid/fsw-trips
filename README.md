@@ -23,9 +23,9 @@
 
 
 # Tecnologias usadas no projeto
-Next.js, TailwindCSS, Node.Js, PostgreSQL com Prisma, Supabase.
+Next.js, TailwindCSS, TypeScript, Node.Js, PostgreSQL com Prisma, Supabase.
 
-[![My Skills](https://skillicons.dev/icons?i=nextjs,tailwindcss,nodejs,postgres,prisma,supabase,&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nextjs,tailwindcss,typescript,nodejs,postgres,prisma,supabase,&perline=10)](https://skillicons.dev)
 
 # Páginas da aplicação
 - /: Página inicial com lista de viagens e botão para login do usuário.
