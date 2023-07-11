@@ -1,4 +1,7 @@
-## Getting Started
+## Em breve mais informações de como rodar o projeto
+
+## Deploy: https://fsw-trips-six.vercel.app/
+
 
 First, run the development server:
 
