@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import ToastProvider from "@/providers/toast";
+import Head from "next/head";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
@@ -14,7 +15,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </Head>
       <body className={poppins.className}>
         <NextAuthProvider>
           <ToastProvider>
