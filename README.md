@@ -51,6 +51,8 @@ Server Components
 Vantagens: Integração direta com banco de dados; melhor performance; cache facilitado
 Desvantagens: não podem ter interatividades (useState, useEffect, onClick)
 
+Obrigado por ler até aqui!
+
 
 
 
